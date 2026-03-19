@@ -83,17 +83,7 @@ const CERTIFICATIONS = [
   },
 ];
 
-const TIMELINE_ITEMS = [
-  {
-    title: "LeetCode Excellence",
-    text: "Solved 450+ coding problems showcasing strong DSA foundations and consistency.",
-    icon: "🏆",
-  },
-  {
-    title: "Hackathon Experience",
-    text: "Participated in multiple hackathons and built rapid prototypes in collaborative teams.",
-    icon: "⚡",
-  },
+const PUBLICATIONS = [
   {
     title: "IEEE Publication",
     text: "Plant Disease Detection Using CNN — Proceedings of 2025 ICCPCT, IEEE.",
@@ -200,9 +190,10 @@ const Index = () => {
   const [progress, setProgress] = useState(0);
 
   const heroRef = useScrollReveal();
+  const aboutRef = useScrollReveal();
   const techRef = useScrollReveal();
   const projectsRef = useScrollReveal();
-  const achievementsRef = useScrollReveal();
+  const publicationsRef = useScrollReveal();
   const certificationsRef = useScrollReveal();
   const contactRef = useScrollReveal();
 
@@ -228,9 +219,10 @@ const Index = () => {
             akash.dev
           </span>
           <div className="hidden gap-6 text-sm text-slate-300 md:flex">
+            <a href="#about" className="transition-colors hover:text-white">About</a>
             <a href="#tech" className="transition-colors hover:text-white">Stack</a>
             <a href="#projects" className="transition-colors hover:text-white">Projects</a>
-            <a href="#achievements" className="transition-colors hover:text-white">Achievements</a>
+            <a href="#publications" className="transition-colors hover:text-white">Publications</a>
             <a href="#certifications" className="transition-colors hover:text-white">Certifications</a>
             <a href="#contact" className="transition-colors hover:text-white">Contact</a>
           </div>
@@ -275,6 +267,29 @@ const Index = () => {
         </a>
       </section>
 
+      <section id="about" ref={aboutRef} className="px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="glass-panel animate-on-scroll relative overflow-hidden border border-white/15 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 md:p-10">
+            <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-cyan-400/10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-indigo-500/10 blur-3xl" />
+            <div className="relative">
+              <p className="mb-2 text-sm font-medium uppercase tracking-[0.25em] text-cyan-300">Who I Am</p>
+              <h2 className="mb-4 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-2xl font-bold text-transparent sm:text-4xl">
+                About Me
+              </h2>
+              <p className="max-w-5xl text-base leading-relaxed text-slate-200 sm:text-lg">
+              I am a Computer Science undergraduate passionate about building scalable and real-world software systems. I have experience developing full-stack applications using modern technologies like React, Node.js, and Docker, with a strong focus on microservices and system design. I actively solve data structures and algorithms problems to strengthen my problem-solving skills and continuously work on projects that combine performance, scalability, and practical impact.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <span className="rounded-full border border-cyan-400/35 bg-cyan-500/10 px-4 py-1.5 text-xs font-medium text-cyan-200">Full-Stack Engineering</span>
+                <span className="rounded-full border border-indigo-400/35 bg-indigo-500/10 px-4 py-1.5 text-xs font-medium text-indigo-200">System Design Driven</span>
+                <span className="rounded-full border border-emerald-400/35 bg-emerald-500/10 px-4 py-1.5 text-xs font-medium text-emerald-200">Performance Oriented</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="tech" ref={techRef} className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="animate-on-scroll mb-12 text-center">
@@ -315,15 +330,15 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="achievements" ref={achievementsRef} className="px-6 py-24">
+      <section id="publications" ref={publicationsRef} className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <div className="animate-on-scroll mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Achievements & Publications</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Publications</h2>
           </div>
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="glass-panel p-6">
+          <div className="space-y-8">
+            <div className="glass-panel p-6 md:p-8">
               <div className="timeline-line">
-                {TIMELINE_ITEMS.map((item) => (
+                {PUBLICATIONS.map((item) => (
                   <div key={item.title} className="timeline-item animate-on-scroll pl-10">
                     <span className="timeline-dot" />
                     <p className="mb-1 text-base font-semibold text-white">{item.icon} {item.title}</p>
@@ -367,7 +382,6 @@ const Index = () => {
               <MagneticButton href="tel:+919550145091" label="+91 9550145091" icon={Phone} />
               <MagneticButton href="https://github.com/Akash1347" label="GitHub" icon={Github} />
               <MagneticButton href="https://www.linkedin.com/in/akash-alampally-50145131b" label="LinkedIn" icon={Linkedin} />
-              <MagneticButton href="https://leetcode.com/u/Akash-47_13/" label="LeetCode" icon={Terminal} />
             </div>
           </div>
           <p className="mt-16 text-xs text-slate-400">© {new Date().getFullYear()} Akash Alampally. Built with React & Tailwind CSS.</p>
