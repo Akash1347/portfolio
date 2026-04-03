@@ -272,19 +272,28 @@ const Index = () => {
           <div className="glass-panel animate-on-scroll relative overflow-hidden border border-white/15 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 md:p-10">
             <div className="pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-cyan-400/10 blur-3xl" />
             <div className="pointer-events-none absolute -bottom-24 -left-24 h-56 w-56 rounded-full bg-indigo-500/10 blur-3xl" />
+            <div className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/10 blur-3xl" />
+
             <div className="relative">
-              <p className="mb-2 text-sm font-medium uppercase tracking-[0.25em] text-cyan-300">Who I Am</p>
-              <h2 className="mb-4 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-2xl font-bold text-transparent sm:text-4xl">
-                About Me
-              </h2>
-              <p className="max-w-5xl text-base leading-relaxed text-slate-200 sm:text-lg">
-              I am a Computer Science undergraduate passionate about building scalable and real-world software systems. I have experience developing full-stack applications using modern technologies like React, Node.js, and Docker, with a strong focus on microservices and system design. I actively solve data structures and algorithms problems to strengthen my problem-solving skills and continuously work on projects that combine performance, scalability, and practical impact.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <span className="rounded-full border border-cyan-400/35 bg-cyan-500/10 px-4 py-1.5 text-xs font-medium text-cyan-200">Full-Stack Engineering</span>
-                <span className="rounded-full border border-indigo-400/35 bg-indigo-500/10 px-4 py-1.5 text-xs font-medium text-indigo-200">System Design Driven</span>
-                <span className="rounded-full border border-emerald-400/35 bg-emerald-500/10 px-4 py-1.5 text-xs font-medium text-emerald-200">Performance Oriented</span>
+              <div className="max-w-5xl">
+                <p className="mb-2 text-sm font-medium uppercase tracking-[0.25em] text-cyan-300">Who I Am</p>
+                <h2 className="mb-5 bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-2xl font-bold text-transparent sm:text-4xl">
+                  About Me
+                </h2>
+                <p className="max-w-4xl text-base leading-relaxed text-slate-200 sm:text-lg">
+                  I am a Computer Science undergraduate passionate about building scalable and real-world software systems. I enjoy turning complex ideas into clean, production-ready experiences through strong engineering fundamentals and practical design decisions.
+                </p>
+                <p className="mt-4 max-w-4xl text-sm leading-relaxed text-slate-300 sm:text-base">
+                  My core focus areas are full-stack web development, microservices architecture, and system design. I also actively solve DSA problems and build ML-backed projects to continuously sharpen both my algorithmic thinking and product mindset.
+                </p>
+
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <span className="rounded-full border border-cyan-400/35 bg-cyan-500/10 px-4 py-1.5 text-xs font-medium text-cyan-200">Full-Stack Engineering</span>
+                  <span className="rounded-full border border-indigo-400/35 bg-indigo-500/10 px-4 py-1.5 text-xs font-medium text-indigo-200">System Design Driven</span>
+                  <span className="rounded-full border border-emerald-400/35 bg-emerald-500/10 px-4 py-1.5 text-xs font-medium text-emerald-200">Performance Oriented</span>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
